@@ -1,0 +1,51 @@
+.videofooter {
+  position: relative;
+  color: white;
+  bottom: 150px;
+  display: flex;
+  margin-left: 40px;
+}
+
+.videofooter_text {
+  flex: 1;
+}
+
+.videofooter_record {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  animation: spinTheRecord infinite 5s linear;
+  height: 50px;
+  filter: invert(1);
+}
+
+.videofooter_text > h3 {
+  padding-top: 20px;
+}
+
+.videofooter_text > p {
+  padding-bottom: 20px;
+}
+
+.videofooter_ticker {
+  display: flex;
+}
+
+.videofooter_icon {
+  position: absolute;
+}
+
+.videofooter_innerticker {
+  height: fit-content;
+  margin-left: 30px;
+  width: 60%;
+}
+
+@keyframes spinTheRecord {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
