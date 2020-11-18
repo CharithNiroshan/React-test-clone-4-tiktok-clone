@@ -3,10 +3,7 @@ import "./Video.css";
 import Videofooter from "./Videofooter";
 import Videosidebar from "./Videosidebar";
 
-//install react-ticker
-//npm install react-ticker
-
-function Video() {
+function Video(props) {
   const [play, setPlay] = useState(false);
   const videoRef = useRef(null);
 
@@ -23,14 +20,22 @@ function Video() {
   return (
     <div className="video">
       <video
-        src=""
-        ref={videoRef}
         className="video_player"
-        loop=""
+        src={props.url}
+        loop
         onClick={handleClick}
+        ref={videoRef}
+      ></video>
+      <Videofooter
+        channel={props.channel}
+        description={props.description}
+        song={props.song}
       />
-      <Videofooter />
-      <Videosidebar />
+      <Videosidebar
+        likes={props.likes}
+        shares={props.shares}
+        comments={props.comments}
+      />
     </div>
   );
 }

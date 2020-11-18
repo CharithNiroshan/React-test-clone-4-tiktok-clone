@@ -1,13 +1,11 @@
 .video_sidebar {
   position: absolute;
-  top: 50%;
+  top: 43%;
   right: 10px;
-  color: white;
-  display: flex;
-  flex-direction: column;
+  color: black;
 }
 
 .sidebar_button {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
